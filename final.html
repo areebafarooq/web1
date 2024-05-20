@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+    .a1{
+        display:flex;
+       
+    color:red;
+    margin: 3px;
+    padding: 2px;
+    justify-content: center;
+    width:auto;
+    margin:auto;
+    font-size: larger;
+    font-style:italic;
+    background-color:cornsilk;
+    border: 1px solid black;
+    }
+    
+        .flex {
+    display: flex;
+    background-color: white;
+    color:black;
+    border: 2px solid white;
+    margin: 10px;
+    padding: 10px;
+    width: auto;
+    height: auto;
+    font-size: 20px;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    text-align: center;
+}
+
+.flex > div {
+    margin: 0 10px; /* Add margin to each div for space between items */
+}
+.icons {
+            display: flex;
+}
+
+.icon {
+    color:white
+    cursor: pointer;
+    margin-left: 10 px;
+}
+        .a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0px;
+            padding: 30px;
+        }
+
+        .a img {
+            width: 100%;
+            height: 100%;
+            object-fit: fill; /* Ensures the image covers the entire container */
+            transition: transform 0.5s; /* Add transition for smooth scaling */
+        }
+
+        .b {
+            display: flex;
+            background-color: black;
+            color: white;
+            border: 2px solid black;
+            margin: 0px;
+            justify-content: center;
+            padding: 10px;
+            width: auto;
+        }
+
+        .banner {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between; /* Align items with equal space between */
+            top:50px;
+        }
+        .product-controls {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .product-controls button {
+            background-color: #fff;
+            color: #333;
+            border: 1px solid #ccc;
+            padding: 8px 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .product-controls button:hover {
+            background-color: #f0f0f0;
+        }
+
+
+        .product-card {
+            width: calc(30% - 20px); /* Adjusted width for better fit in three columns */
+            margin: 0 10px 20px 10px;
+            background-color: #f9f9f9;
+            padding: 20px;
+            text-align: center;
+            border-radius: 5px;
+        }
+
+        .product-card img {
+            width: 100%;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .product-card button {
+            background-color: palevioletred;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .buttons {
+    background-color: palevioletred;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px; /* Add some space between buttons */
+}
+
+.buttons:hover {
+    background-color: #d61e5b; /* Darker shade on hover */
+}
+.grid-container {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr); /* Five columns with equal width */
+            gap: 10px; /* Gap between images */
+            justify-content: center; /* Center the grid horizontally */
+            margin-top: 20px; /* Add space between div.a and the grid */
+        }
+
+        .grid-container img {
+            max-width: 100%; /* Ensure images don't exceed their container width */
+            height: auto; /* Maintain aspect ratio */
+        }
+        .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    width: 380px; /* Adjust width as needed */
+    height: 400px; /* Adjust height as needed */
+    overflow: auto; /* Add scrollbars if content exceeds height */
+    z-index: 1;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    border-radius: 5px;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: inline-block;
+    width: 70%; /* Each item takes up 20% of the width */
+    box-sizing: border-box; /* Include padding and border in width calculation */
+}
+        .dropbtn {
+            background-color: black;
+            color: white;
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: #070707;
+        }
+.size{
+    font-size: x;
+
+}
+.search-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* Align items to the right */
+}
+
+.search-input {
+  padding: 8px 16px;
+  border: 1px solid black;
+  border-radius: 4px;
+  margin-right:1px;
+  margin-top: 3px;
+}
+
+.search-button {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius:solid black 4px;
+  cursor: pointer;
+  margin-top: 3px;
+}
+
+.search-button:hover {
+  background-color: #0056b3;
+}
+.blinking {
+    animation: blink 1s infinite alternate; /* Use the "blink" animation */
+
+}
+
+@keyframes blink {
+    from { opacity: 0; } /* Start with full opacity */
+    to { opacity: 1; } /* Transition to completely transparent */
+}
+    </style>
+</head>
+<body>
+    <div class="a1 blinking">
+        <p>Shop now and Get 15% off</p>
+    </div>
+    <div class="search-container">
+        <input type="text" class="search-input" placeholder="Search...">
+        <button class="search-button">Search</button>
+      </div>
+    <div class="flex">
+        <div class="dropdown">
+            <button class="dropbtn">Summer Saver</button>
+            <div class="dropdown-content">
+                <!-- Dropdown content for Summer Saver -->
+                <a href="#">Product 1</a>
+                <a href="#">Product 2</a>
+                <a href="#">Product 3</a>
+                <!-- Add more products as needed -->
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Makeup</button>
+            <div class="dropdown-content">
+                <!-- Dropdown content for Makeup -->
+                <a href="#">Product 1</a>
+                <a href="#">Product 2</a>
+                <a href="#">Product 3</a>
+                <!-- Add more products as needed -->
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Skincare</button>
+            <div class="dropdown-content">
+                <!-- Dropdown content for Skincare -->
+                <a href="#">Product 1</a>
+                <a href="#">Product 2</a>
+                <a href="#">Product 3</a>
+                <!-- Add more products as needed -->
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Haircare</button>
+            <div class="dropdown-content">
+                <!-- Dropdown content for Haircare -->
+                <a href="#">Product 1</a>
+                <a href="#">Product 2</a>
+                <a href="#">Product 3</a>
+                <!-- Add more products as needed -->
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Fragrances</button>
+            <div class="dropdown-content">
+                <!-- Dropdown content for Fragrances -->
+                <a href="#">Product 1</a>
+                <a href="#">Product 2</a>
+                <a href="#">Product 3</a>
+                <!-- Add more products as needed -->
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Brands</button>
+            <div class="dropdown-content">
+                <!-- Dropdown content for Brands -->
+                <a href="#">Product 1</a>
+                <a href="#">Product 2</a>
+                <a href="#">Product 3</a>
+                <!-- Add more products as needed -->
+            </div>
+        </div>
+        <div class="icons">
+            <i class="fas fa-search icon"></i>
+            <i class="fas fa-cart-plus icon"></i>
+            <i class="fas fa-heart icon"></i>
+        </div>
+    </div>
+    
+        <section class="banner">
+            <h2>Welcome to our website</h2>
+            <p>Find your signature scent and other products with us</p>
+    </section>
+    <div class="a">
+        <img id="banner" src="https://cdn.shopify.com/s/files/1/0568/4635/2438/files/fragrances_banner_1.jpg?v=1701341497">
+    </div>
+    <div class="b">
+    <h1>SHOP BY BRAND</h1></div>
+    <section class="products">
+        <div class="product-controls">
+            <button class="sort-by-button">Sort By</button>
+            <button class="items-per-page-button">Items per Page</button>
+        </div>
+
+        <div id="numbering" class="product-controls">
+            <!-- Numbering buttons will be appended here -->
+        </div>
+
+        <div id="page-buttons" class="product-controls">
+            <!-- Page buttons will be appended here -->
+        </div>
+    </section>
+
+<div class="grid-container">
+    <img src="https://cdn.shopify.com/s/files/1/0568/4635/2438/files/brands-icons-updated_11.png?v=1701343219" alt="Image 1">
+    <img src="https://cdn.shopify.com/s/files/1/0568/4635/2438/files/brands-icons-updated_01.png?v=1701343189" alt="Image 2">
+    <img src="https://cdn.shopify.com/s/files/1/0568/4635/2438/files/brands-icons-updated_10.png?v=1701343189" alt="Image 3">
+    <img src="https://cdn.shopify.com/s/files/1/0568/4635/2438/files/brands-icons-updated_09.png?v=1701343190" alt="Image 4">
+    <img src="https://cdn.shopify.com/s/files/1/0568/4635/2438/files/brands-icons-updated_08.png?v=1701343189" alt="Image 5">
+</div>
+    <section class="products">
+        <h2>Featured Products</h2>
+
+        <div class="product-card">
+            <img src="https://allurebeauty.pk/cdn/shop/products/calvin-klein-eternity-moment-edp-women-100ml-perfume_266d092e-45ae-409b-a591-e9719da7c878_1170x.jpg?v=1667867879" alt="Perfume 1">
+            <h3>Calvin Klein for Women</h3>
+            <p>floral bliss perfume</p>
+            <button>Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="https://allurebeauty.pk/cdn/shop/products/4847cm_kjjvv_72029133-5fc0-4a5d-a671-b52d142f1c3c-859105_1170x.jpg?v=1699630641" alt="Perfume 2">
+            <h3>Christian Dior Sauvage for Men</h3>
+            <p>Classic Elegance Cologne</p>
+            <button>Add to Cart</button>
+        </div>
+    </br>
+       
+        <div class="product-card">
+            <img src="https://allurebeauty.pk/cdn/shop/products/3349668579839-318919.jpg?v=1699636445" alt="Perfume 3">
+            <h3>Paco Rabanne for Men</h3>
+            <p>cool dark wooden spray</p>
+            <button>Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="https://allurebeauty.pk/cdn/shop/products/737052933269_30e6848a-8c20-41ce-bc05-bdb751f042e6-851645.jpg?v=1699633036" alt="Perfume 4">
+            <h3>Hugo BOSS bottled for Men</h3>
+            <p>fresh & masculine longlasting smell</p>
+            <button>Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="https://allurebeauty.pk/cdn/shop/products/divinancnc_acc50710-b0de-42d3-bddf-15150735b381-884148.jpg?v=1699638242" alt="Perfume 5">
+            <h3>Charolina Herarra for Women</h3>
+            <p>fresh flowery smell</p>
+            <button>Add to Cart</button>
+        </div>
+        <button class="buttons">Button 1</button>
+        <button class="buttons">Button 2</button>
+        <button class="buttons">Button 3</button>
+    </section>
+    <script>
+    const buttons = document.querySelectorAll('.buttons');
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Toggle a class on the button
+                button.classList.toggle('active');
+
+                // Display an alert message
+                alert('Button clicked!');
+
+                // Update a counter value
+                const counter = document.querySelector('#counter');
+                if (counter) {
+                    counter.innerText = parseInt(counter.innerText) + 1;
+                }
+
+                // Make an AJAX request (example)
+                fetch('https://api.example.com/data')
+                    .then(response => response.json())
+                    .then(data => console.log(data))
+                    .catch(error => console.error('Error:', error));
+
+                // Redirect to another page (example)
+                window.location.href = 'https://www.example.com';
+            });
+        });
+
+        const shopNow = document.querySelector('.a1');
+
+    // Add a click event listener to the element
+    shopNow.addEventListener('click', function() {
+        // Perform the desired action when clicked, for example, display an alert
+        alert('Shop now and Get 15% off!');
+    });
+    var banner = document.getElementById('banner');
+
+        banner.addEventListener('mouseenter', function() {
+            banner.style.transform = 'scale(1.1)'; // Zoom in by 10%
+        });
+
+        banner.addEventListener('mouseleave', function() {
+            banner.style.transform = 'scale(1)'; // Reset back to original size
+        });
+    
+    </script>
+</body>
+</html>
